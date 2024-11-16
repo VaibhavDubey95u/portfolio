@@ -1,0 +1,582 @@
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+   }
+
+ body{
+
+   height: 100vh;
+   width: 100vw;
+   background-color:black;
+   color: white;
+   padding-top: 130px;
+
+ }
+
+ .Header{
+   height: 100%;
+   width: 100%;
+   background-image: url();
+   
+   }
+
+   /* heading*/
+
+   nav {
+      background-color: rgb(255, 91, 31);
+      height: 80px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; 
+      padding: 0 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+    
+    label.logo {
+      color:purple;
+      font-size: 35px;
+      line-height: 80px;
+      font-weight: bold;
+      padding-left: 2rem;
+    }
+    
+    nav label span{
+      color: red;
+      font-size: 50px;
+      text-decoration: none;
+    }
+    
+    nav ul {
+      display: flex;
+      margin-left: auto;
+    }
+    
+    nav ul li {
+      display: inline-block;
+      line-height: 80px;
+      margin: 0 5px;
+    }
+    
+    nav ul li a {
+      font-size: 12px;
+      color: white;
+      padding: 7px 10px;
+      border-radius: 3px;
+      text-transform: uppercase;
+      display: inline-block;
+    }
+    
+    a.active, a:hover {
+      text-decoration: underline;
+      text-decoration-color: red;
+      text-decoration-thickness:2px;
+      transition: 1s;
+    }
+    
+    
+    
+    .checkbtn {
+      font-size: 22px;
+      color: white;
+      line-height: 80px;
+      margin-right: 30px;
+      cursor: pointer;
+      display: none;
+    }
+    
+    #check {
+      display: none;
+    }
+    
+    /* Responsive media query for small screen size */
+    @media (max-width: 1050px) {
+      label.logo {
+        padding-left: 30px;
+      }
+    
+      nav ul li a {
+        font-size: 16px;
+      }
+    }
+    
+    
+    @media (max-width: 890px) {
+      /* hamburger icon */
+      .checkbtn {
+        display: block; 
+      }
+    
+      label.logo {
+        font-size: 22px;
+      }
+    
+      nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 80px;   
+        
+      }
+    
+      nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+      }
+    
+      nav ul li a {
+        font-size: 20px;
+      }
+    
+      a:hover, a.active {
+        background: none;
+        color: #0082e6;
+      }
+    
+      #check:checked ~ ul {
+        left: 0; 
+      }
+
+
+   }
+   
+
+
+ .well {
+   background:black;
+   margin: 0;
+   padding: 3rem;
+   height: 10vh;
+   display: flex;
+   justify-content:start;
+   align-items: center;
+   
+   
+ } 
+
+
+.intro {
+   width: 0; 
+   height: 0; 
+   position: relative;
+   border-bottom: 5px solid rgb(167, 113, 12);
+   overflow: hidden;
+   animation: animation 3s linear forwards; 
+   text-align: center;
+   
+    
+}
+
+.intro h1 {
+   color:rgb(167, 113, 12);
+   margin: 0;
+   padding: 0;
+   font-size: 35px;
+}
+
+@keyframes animation {
+   0% {
+       width: 0;
+       height: 0;
+   }
+
+   30% {
+       width: 50px;
+       height: 0;
+   }
+
+   60% {
+       width: 50px;
+       height: 80px;
+   }
+
+   100% {
+       width: 200px; 
+       height: 80px;
+   }
+}
+
+
+.header-content{
+   padding-top: 2rem;
+   padding-left: 3rem;
+   display: inline-block;
+   
+  
+}
+
+.image{
+   position: absolute;
+   bottom:200px ;
+   left: 900px;
+   top: 250px;
+
+   width: 320px;
+   height: auto;
+   border-radius: 20px;
+   z-index: 10;  
+   
+}
+.image>img{
+   display: inline-block;
+   height: 300px;
+   width: 320px;
+   border-radius: 20px;
+   
+   width: 100%;
+   height: auto;
+   border-radius: 10px;
+   
+
+
+}
+
+/* media */
+@media (max-width: 768px) {
+   .image {
+      position: relative; 
+      width: 100%; 
+      max-width: 320px; 
+      margin: 20px auto; 
+      top: auto;
+      bottom: auto;
+      left: auto;
+   }
+
+   .image img {
+      width: 100%; 
+      height: auto;
+   }
+}
+
+
+
+
+
+
+
+
+.header-content>p{
+   padding-top: 20px;
+   font-size:30px ;
+   color: rgb(203, 107, 11);
+   
+   
+}
+
+
+.header-content>h2{
+   font-size: 3rem;
+   font-weight:bold;
+   color: aqua;
+  
+}
+
+
+.info{
+   display: flex;
+   padding-top: 3rem;
+   font-size: 17px;  
+}
+
+.info>p{
+   color: rgb(5, 90, 90);
+}
+
+.info .para{
+   padding-left: 11rem;
+   
+}
+
+/* -----------------About section----------------- */
+
+
+#ABOUT{
+   padding: 130px 4rem;
+   background-color:black;
+   
+}
+
+.row{
+   display: flex;
+   justify-content:space-between;
+   flex-wrap: wrap;
+}
+
+.about-one{
+   flex-basis: 40%;
+  
+}
+
+.about-one>img{
+   width: 70%;
+   border-radius: 15px;
+   margin-top: 20px;
+  
+}
+
+.about-two>h1{
+   font-size:2rem;
+   font-weight: bold;
+   padding-bottom: 1rem;
+   color: rgb(222, 22, 56);
+
+}
+
+.about-two{
+   flex-basis: 60%;
+}
+
+.about-two>p{
+   color: rgb(5, 90, 90) ;
+}
+
+.tab-titles{
+   display: flex;
+   margin: 20px 0 40px;
+}
+
+.tab-links{
+   margin-right: 50px;
+   font-size: 18px;
+   font-weight: bold;
+   cursor: pointer;
+   position: relative;
+   color: rgb(222, 22, 56) ;
+
+}
+
+.tab-links:hover{
+   text-decoration: underline;
+   text-decoration-color: red;
+}
+
+.tab-contents{
+   color: rgb(5, 90, 90) ;
+}
+
+.tab-contents>ul>li{
+   margin-top: 10px 0;
+
+}
+
+.tab-contents>ul>li>span{
+   font-size: 15px;
+   color: rgb(239, 85, 85);
+}
+
+/* -------------------services------------------ */
+
+
+.SERVICES{
+   padding: 130px 0;
+}
+
+.services>.sub-title{
+   color:rgb(129, 38, 5) ;
+   margin-left: 12px;
+   
+
+}
+
+.services-list{
+   display: grid;
+   grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+   grid-gap:40px;
+   margin-top: 50px;
+   padding: 4rem;
+}
+
+.sub-title{
+   padding: 0 4rem;
+}
+
+.services-list>div{
+   background-color: rgb(145, 139, 139);
+   padding: 30px;
+   font-size: 15px;
+   font-weight: bold;
+   border-radius: 10px;
+}
+
+.services-list>div>p{
+   color:rgb(5, 90, 90);
+
+}
+
+.services-list>div>h2{
+   color:rgb(102, 35, 11);
+   padding-bottom: 1rem;
+   font-weight: 900;
+}
+
+.services-list>div>a{
+   font-size: 1rem;
+   
+}
+
+.services-list>div:hover{
+   background-color: rgb(0, 113, 113);
+}
+
+
+
+/* ----------------portfolio--------------- */
+
+.PORTFOLIO{
+   padding: 7rem 0;
+}
+
+.portfolio >.sub-title{
+   color: rgb(216, 56, 56);
+}
+
+.work-list{
+   display: grid;
+   grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+   grid-gap:40px;
+   margin-top: 50px;
+   
+}
+
+.work{
+   position: relative;
+   border-radius: 10px;
+   overflow: hidden;
+   padding-left: 4rem;
+   margin-right: 3rem;
+   
+   
+}
+
+.work>img{
+   border-radius: 10px;
+   width:100%;
+   height: 300px;
+   display: block;
+}
+
+.work >.layer>h3{
+   color: rgb(195, 63, 63);
+}
+
+.work >.layer>p{
+   color:rgb(0, 113, 113) ;
+}
+
+
+
+
+/* -------------------contact--------------------- */
+
+footer {
+   background-color:rgb(136, 150, 115);
+   color: white;
+   padding: 50px 20px;
+}
+
+footer .contact-form {
+   max-width: 600px;
+   margin: 0 auto;
+   text-align: center;
+}
+
+footer .contact-form h2 {
+   margin-bottom: 20px;
+}
+
+footer .contact-form form {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+footer .contact-form input,
+footer .contact-form textarea {
+   width: 100%;
+   max-width: 400px;
+   padding: 10px;
+   margin: 10px 0;
+   border: 1px solid whitesmoke;
+   border-radius: 5px;
+}
+
+footer >.contact-form button {
+   padding: 10px 20px;
+   background-color:rgb(58, 58, 58);
+   color: white;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+}
+
+footer .contact-form button:hover {
+   background-color:red;
+}
+
+.contact-form p{
+   padding-top: 2rem;
+   font-size: 15px;
+   font-weight: 900;
+   color: rgb(0, 113, 113);
+}
+
+.contact-form h2{
+   color: rgb(129, 206, 129);
+}
+
+
+.logo img{
+   height: 25px;
+   width: 25px;
+   margin-top: 15px;
+   transition: transform .5s;
+   
+}
+
+.logo img:hover{
+   cursor: pointer;
+   transform: translateY(-5px);
+}
+
+
+.logo p a span{
+   color: khaki;
+}
+
+.logo p span{
+   color: rgb(129, 206, 129);
+   font-size: 20px;
+}
+
+.logo p img{
+   height: 1rem;
+   width: 1rem;
+   margin-right:.5rem ;
+  
+}
+
+
+
+
+
+
+
+
+ 
+
+
+
+
